@@ -1,0 +1,20 @@
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class Sorting {
+	Scanner keyboard = new Scanner(System.in);
+	String x = "";
+	ArrayList<String> original = new ArrayList<String>();
+	public static void main(String[] args) {
+		Sorting S = new Sorting();
+	}
+	Sorting() {
+		System.out.println("Type a word");
+		while(!keyboard.next().equals("0")) {
+			original.add(x);
+			x = keyboard.next();
+		}
+		
+		System.out.println(original);
+	}
+}

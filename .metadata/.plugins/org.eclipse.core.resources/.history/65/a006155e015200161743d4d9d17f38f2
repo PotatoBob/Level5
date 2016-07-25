@@ -1,0 +1,17 @@
+import java.util.Scanner;
+
+public class Sorting {
+	Scanner keyboard = new Scanner(System.in);
+	String x = "";
+	public static void main(String[] args) {
+		Sorting S = new Sorting();
+	}
+	Sorting() {
+		System.out.println("Type a word");
+		while (!keyboard.next().equals("0")) {
+			
+			
+		}
+		keyboard.next();
+	}
+}
