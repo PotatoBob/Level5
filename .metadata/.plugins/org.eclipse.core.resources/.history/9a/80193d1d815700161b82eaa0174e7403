@@ -1,0 +1,10 @@
+
+public class ArrayManipulation {
+	public static void main(String[] args) {
+		ArrayManipulation AM = new ArrayManipulation();
+	}
+	ArrayManipulation() {
+		
+	}
+	
+}

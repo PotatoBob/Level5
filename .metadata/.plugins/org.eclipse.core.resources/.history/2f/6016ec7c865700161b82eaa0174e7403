@@ -1,0 +1,13 @@
+
+public class Inserting {
+	public static void main(String[] args) {
+		Inserting I = new Inserting();
+	}
+	Inserting() {
+		
+	}
+	static int[] insertAt(int[] i) {
+		
+		return i;
+	}
+}
