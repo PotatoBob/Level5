@@ -1,0 +1,19 @@
+
+public class HighestIntInArray {
+	int[] stuff;
+	HighestIntInArray(int[] arr) {
+		stuff = arr;
+	}
+	void setHighestIntInArray(int[] i) {
+		stuff = i;
+	}
+	int getHighestIntinArray() {
+		int count = 0;
+		for (int j : stuff) {
+			if(j>count) {
+				count = j;
+			}
+		}
+		return count;
+	}
+}

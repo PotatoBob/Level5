@@ -1,0 +1,22 @@
+
+public class Superhero {
+	String name = null;
+	String superpower = null;
+	Superhero(String s, String s1)  {
+		name = s;
+		superpower = s1;
+	}
+	void setName(String s) {
+		name = s;
+	}
+	String getName() {
+		return name;
+	}
+	void setSuperpower(String s) {
+		superpower = s;
+	}
+	String getSuperpower() {
+		return superpower;
+	}
+	
+}

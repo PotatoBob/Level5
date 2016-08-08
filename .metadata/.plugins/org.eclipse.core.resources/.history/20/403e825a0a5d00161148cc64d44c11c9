@@ -1,0 +1,9 @@
+
+public class getHighestIntInArray {
+	int count = 0;
+	int[] stuf;
+	public static void main(String[] args) {
+		IntArrays IA = new IntArrays();
+	}
+	
+}

@@ -1,0 +1,12 @@
+
+public class EasyConstructor {
+	public static void main(String[] args) {
+		EasyConstructor EC = new EasyConstructor();
+	}
+	EasyConstructor() {
+		
+	}
+	getFirstName() {
+		
+	}
+}

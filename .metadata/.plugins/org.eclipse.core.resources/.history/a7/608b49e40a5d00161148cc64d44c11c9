@@ -1,0 +1,13 @@
+
+public class HighestIntInArray {
+	int count = 0;
+	int getHighestIntInArray(int[] arr) {
+		for (int j : arr) {
+			if(j>count) {
+				count = j;
+			}
+		}
+		return count;
+	}
+	
+}

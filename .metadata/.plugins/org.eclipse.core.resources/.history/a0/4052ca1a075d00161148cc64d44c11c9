@@ -1,0 +1,35 @@
+
+public class Person {
+	public static String s = null;
+	public static int k = 0;
+	static int j = 0;
+	public static void main(String[] args) {
+		Person P = new Person(s, k);
+	}
+	Person(String s, int i) {
+	
+		getAge();
+	}
+		String getFirstName() {
+		
+		for(int i = 0; i<s.length(); i++) {
+			if(s.charAt(i)==' ') {
+				j = i;
+				break;
+			}
+		}
+		return s.substring(0, j);
+	}
+	String getLastName() {
+		for(int i = 0; i<s.length(); i++) {
+			if(s.charAt(i)==' ') {
+				j=i+1;
+				break;
+			}
+		}
+		return s.substring(j, s.length());
+	}
+	int getAge() {
+		return k;
+	}
+}

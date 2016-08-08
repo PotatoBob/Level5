@@ -1,0 +1,7 @@
+
+public class Superhero {
+	String name = null;
+	String superpower = null;
+	Superhero(String s)
+	
+}
