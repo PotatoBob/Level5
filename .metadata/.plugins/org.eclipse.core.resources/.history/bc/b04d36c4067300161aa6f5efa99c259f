@@ -1,0 +1,10 @@
+import java.util.ArrayList;
+
+public abstract class Doctor {
+	ArrayList<Patient> assignedList = new ArrayList<Patient>();
+	
+	void assignPatient(Patient p) {
+		assignedList.add(p);
+	}
+	abstract boolean performsSurgery(Doctor d);
+}

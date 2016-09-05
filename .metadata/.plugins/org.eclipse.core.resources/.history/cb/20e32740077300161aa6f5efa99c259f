@@ -1,0 +1,11 @@
+
+public class Patient {
+	boolean caredFor;
+	
+	boolean getCaredFor() {
+		return caredFor;
+	}
+	void checkPulse() {
+		caredFor = true;
+	}
+}

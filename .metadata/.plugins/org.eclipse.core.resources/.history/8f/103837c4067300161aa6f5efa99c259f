@@ -1,0 +1,8 @@
+
+public class GeneralPractitioner extends Doctor{
+	
+	@Override
+	boolean performsSurgery(Doctor d) {
+		return false;
+	}
+}
