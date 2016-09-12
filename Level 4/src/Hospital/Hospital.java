@@ -17,12 +17,18 @@ public class Hospital {
 	ArrayList<Patient> getPatients() {
 		return patList;
 	}
-	public void assignPatientsToDoctors() {
-		for(Doctor d: docList) {
-			if(d.assignedList.size()<=3) {
-				
+	public void assignPatientsToDoctors() throws DoctorFullException{
+		System.out.println(docList);
+		System.out.println(patList);
+		for(Patient p : getPatients()) {
+			for(Doctor d : getDoctors()) {
+					try {
+						d.assignPatient(p);
+					}
+					catch(DoctorFullException DFE) {
+						System.err.println(DFE);
+					}
 			}
-			
 		}
 	}
 }

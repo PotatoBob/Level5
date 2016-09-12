@@ -9,10 +9,20 @@ public class Doctor {
 		
 	}
 	public void assignPatient(Patient p) throws DoctorFullException {
-		if(assignedList.size()<=3)
-		assignedList.add(p);
-		else 
+		
+
+		/*if(assignedList.size()<3){
+			System.out.println(assignedList.size());
+			assignedList.add(p);
+		}else 
 			throw new DoctorFullException("FULL");
+		*/
+		if(assignedList.size()>=3) {
+			throw new DoctorFullException("FULL");
+		} else {
+			assignedList.add(p);
+		}
+		
 	}
 	ArrayList<Patient> getPatients() {
 		return assignedList;
