@@ -3,6 +3,7 @@ package Hospital;
 import java.util.ArrayList;
 
 public class Doctor {
+	boolean Evil = false;
 	ArrayList<Patient> assignedList = new ArrayList<Patient>();
 	
 	Doctor() {
@@ -17,7 +18,7 @@ public class Doctor {
 		}else 
 			throw new DoctorFullException("FULL");
 		*/
-		if(assignedList.size()>=3) {
+		if(assignedList.size()==3) {
 			throw new DoctorFullException("FULL");
 		} else {
 			assignedList.add(p);
@@ -29,7 +30,11 @@ public class Doctor {
 	}
 	void doMedicine() {
 		for(Patient p: assignedList) {
-			p.caredFor=true;
+			if(this.isEvil())
+				p.kill();
+			else {
+				p.caredFor=true;
+			}
 		}
 	}
 	boolean performsSurgery() {
@@ -50,6 +55,15 @@ public class Doctor {
 		}
 		else
 			return false;
+	}
+	boolean getisEvil() {
+		return Evil;
+	}
+	boolean isEvil() {
+		return getisEvil();
+	}
+	void joinTheDarkSide() {
+		Evil = true;
 	}
 	
 }

@@ -1,0 +1,37 @@
+package Hospital;
+import java.util.ArrayList;
+
+public class Hospital {
+	ArrayList<Doctor> docList = new ArrayList<Doctor>();
+	ArrayList<Patient> patList = new ArrayList<Patient>();
+	
+	void addDoctor(Doctor d) {
+		docList.add(d);
+	}
+	ArrayList<Doctor> getDoctors() {
+		return docList;
+	}
+	void addPatient(Patient p) {
+		patList.add(p);
+	}
+	ArrayList<Patient> getPatients() {
+		return patList;
+	}
+	public void assignPatientsToDoctors() throws DoctorFullException{
+		System.out.println(docList);
+		System.out.println(patList);
+		int count = 0;
+		for(Patient p : getPatients()) {
+			for(Doctor d : getDoctors()) {
+				while(count<3) {
+					d.assignPatient(p);
+					patList.remove(p);
+				}
+				continue;
+			}
+		}
+		for(Doctor d : getDoctors()) {
+			System.out.println(d.getPatients());
+		}
+	}
+}

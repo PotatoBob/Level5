@@ -17,18 +17,29 @@ public class Hospital {
 	ArrayList<Patient> getPatients() {
 		return patList;
 	}
+	void add(Object o) {
+		if(o instanceof Doctor) {
+			addDoctor((Doctor) o);
+		} else if(o instanceof Patient) {
+			addPatient((Patient) o);
+		}
+	}
 	public void assignPatientsToDoctors() throws DoctorFullException{
-		System.out.println(docList);
-		System.out.println(patList);
-		for(Patient p : getPatients()) {
-			for(Doctor d : getDoctors()) {
-					try {
-						d.assignPatient(p);
-					}
-					catch(DoctorFullException DFE) {
-						System.err.println(DFE);
-					}
+		int count = 0;
+		for(Doctor d : getDoctors()) {
+			for(Patient p : getPatients()) {
+				if(count<3) {
+					d.assignPatient(p);
+					count++;
+				} else {
+					continue;
+				}
 			}
+			count = 0;
+			for(Patient p : d.assignedList) {
+			patList.remove(p);	
+			}
+			continue;
 		}
 	}
 }
