@@ -1,0 +1,22 @@
+package Banks;
+
+import java.util.ArrayList;
+
+public class Bank {
+	ArrayList<Account> acclist;
+	
+	void addAccount(Account a, int accnum) throws PreviouslyExistingAccountException{
+		for(Account q: acclist) {
+			if(q.getAccnum()!=accnum) {
+				break;
+			} else {
+				throw new PreviouslyExistingAccountException("User already exists");
+			}
+		}
+		acclist.add(a);
+		a.setAccnum(accnum);
+	}
+	void removeAccount(int accnum) {
+		
+	}
+}

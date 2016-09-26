@@ -1,0 +1,8 @@
+package Banks;
+
+public class PreviouslyExistingAccountException extends Exception{
+	PreviouslyExistingAccountException() {
+		super();
+	}
+	
+}

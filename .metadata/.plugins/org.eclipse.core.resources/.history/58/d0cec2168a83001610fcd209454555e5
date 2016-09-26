@@ -1,0 +1,19 @@
+package Banks;
+
+import java.util.ArrayList;
+
+public class BankRunner {
+	
+	public static void main(String[] args) {
+		ArrayList<Account> list = new ArrayList<Account>();
+		Account a = new Account(1, 420.33f);
+		list.add(a);
+		Account b = new Account(2, 14124f);
+		list.add(b);
+		Account c = new Account(3, 12.99f);
+		list.add(c);
+		Bank bank = new Bank(list);
+		
+	}
+
+}
