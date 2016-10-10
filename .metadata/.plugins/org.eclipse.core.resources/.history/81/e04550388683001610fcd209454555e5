@@ -1,8 +1,0 @@
-package Banks;
-
-public class NonExistantAccountException extends Exception{
-	NonExistantAccountException() {
-		super();
-	}
-	
-}

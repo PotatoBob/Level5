@@ -10,4 +10,6 @@
 <fullyQualifiedTypeName name="junit.framework.TestCase"/>
 <fullyQualifiedTypeName name="java.util.ArrayList"/>
 <fullyQualifiedTypeName name="Banks.Account"/>
+<fullyQualifiedTypeName name="org.teachingextensions.logo.Tortoise"/>
+<fullyQualifiedTypeName name="java.util.Stack"/>
 </qualifiedTypeNameHistroy>

@@ -1,0 +1,24 @@
+import java.util.Stack;
+
+public class AdvancedPuzzles {
+	static Stack<Integer> sequence;
+	static String list;
+	public static void main(String[] args) {
+		sequence();
+	}
+	static void sequence(int a) {
+		while(a>0) {
+			sequence.add(a);
+			if(a%2==0) {
+				a/=2;
+			} else {
+				a=(a-1)/2;
+			}
+		}
+		sequence.add(a);
+		for(int i = 0; i<sequence.size()-1; i++) {
+			list=list+sequence.pop()+", ";
+		}
+		list=list+sequence.pop()+"";
+	}
+}

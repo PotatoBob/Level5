@@ -1,0 +1,29 @@
+
+public class WhileLoopPuzzles {
+	public static void main(String[] args) {
+		System.out.println(millionaire());
+		zebra();
+	}
+	static int millionaire() {
+		int count=0;
+		int money=1;
+		while(money<1000000) {
+			count++;
+			money*=2;
+		}
+		return count;
+	}
+	static void zebra() {
+		String zebra="white";
+		while(1==1) {
+			if(zebra.equals("white")) {
+				zebra="black";
+			} else if(zebra.equals("black")){
+				zebra="white";
+			} else {
+				zebra="black";
+			}
+			System.out.println(zebra);
+		}
+	}
+}
