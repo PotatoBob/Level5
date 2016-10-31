@@ -12,4 +12,9 @@
 <fullyQualifiedTypeName name="Banks.Account"/>
 <fullyQualifiedTypeName name="org.teachingextensions.logo.Tortoise"/>
 <fullyQualifiedTypeName name="java.util.Stack"/>
+<fullyQualifiedTypeName name="javax.swing.JPanel"/>
+<fullyQualifiedTypeName name="javax.swing.JButton"/>
+<fullyQualifiedTypeName name="java.util.Random"/>
+<fullyQualifiedTypeName name="javax.swing.JFrame"/>
+<fullyQualifiedTypeName name="javax.swing.JOptionPane"/>
 </qualifiedTypeNameHistroy>

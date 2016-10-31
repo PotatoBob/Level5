@@ -1,0 +1,27 @@
+import javax.swing.JOptionPane;
+
+public class toSort{
+	static String text1;
+	static String text2;
+	static String better;
+	public static void main(String[] args) {
+		text1 = JOptionPane.showInputDialog("Input some text");
+		text2 = JOptionPane.showInputDialog("Input some more text");
+		betterString(text1, text2, (s1, s2)->{
+			if(s1.length()>=s2.length()) {
+				return true;
+			} else {
+				return false;
+			} 
+			
+		});
+	}
+	public static String betterString(String s1, String s2, Sorter s) {
+		if(s.sort(s1, s2)) {
+			return s1;
+		} else {
+			return s2;
+		}
+	}
+
+}

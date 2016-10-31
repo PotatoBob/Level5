@@ -1,0 +1,43 @@
+import javax.swing.JOptionPane;
+
+public class toSort{
+	static String text1;
+	static String text2;
+	static String better;
+	public static void main(String[] args) {
+		text1 = JOptionPane.showInputDialog("Input some text");
+		text2 = JOptionPane.showInputDialog("Input some more text");
+		//longer/shorter
+		betterString(text1, text2, (s1, s2)->{
+			if(s1.length()>=s2.length()) {
+				System.out.println(s1+" is longer");
+				System.out.println(s2+" is shorter");
+				return true;
+			} else {
+				System.out.println(s2+" is longer");
+				System.out.println(s1+" is shorter");
+				return false;
+			} 
+			
+		});
+		//lexigrapically shorter
+		betterString(text1, text2, (s1, s2)->{
+			if(s1.compareTo(s2)<=0) {
+				System.out.println(s1+" is lexigraphically smaller than "+s2);
+				return true;
+			} else {
+				System.out.println(s2+" is lexigraphically smaller than "+s1);
+				return false;
+			} 
+			
+		});
+	}
+	public static String betterString(String s1, String s2, Sorter s) {
+		if(s.sort(s1, s2)) {
+			return s1;
+		} else {
+			return s2;
+		}
+	}
+
+}

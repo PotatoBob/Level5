@@ -1,0 +1,34 @@
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+
+public class Lambdas {
+	static JFrame window;
+	static JPanel panel;
+	static JButton button1;
+	static JButton button2;
+	static JButton button3;
+	static JButton button4;
+	public static void main(String[] args) {
+		createFrame();
+	}
+	public static void createFrame() {
+		window = new JFrame();
+		window.setVisible(true);
+		panel = new JPanel();
+		button1 = new JButton();
+		button2 = new JButton();
+		button3 = new JButton();
+		button4 = new JButton();
+		panel.add(button1);
+		panel.add(button2);
+		panel.add(button3);
+		panel.add(button4);
+		window.add(panel);
+		window.pack();
+		window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+	}
+	public static void buttonPress() {
+		
+	}
+}
